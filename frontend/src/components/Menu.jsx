@@ -1,4 +1,5 @@
 import React from 'react';
+import nenu from '../assets/images/menu.png';
 import espressoImage from '../assets/images/espresso.png';
 import latteImage from '../assets/images/latte.png';
 import cappuccinoImage from '../assets/images/cappuccino.png';
@@ -18,9 +19,13 @@ function Menu() {
 
   return (
     <div
-      className="menu container mx-auto p-6 text-white bg-black"
+      className="menu container mx-auto p-6 text-white"
       style={{
         minHeight: '100vh',
+        backgroundImage: `url(${nenu})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
       }}
     >
       <h1 className="text-3xl font-bold text-center mb-6 bg-black bg-opacity-50 p-3 rounded-lg">
@@ -30,17 +35,19 @@ function Menu() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {coffeeDrinks.map((drink, index) => (
           <div
-            key={index}
-            className="coffee-item flex flex-col items-center justify-center bg-black text-white border border-black p-6 rounded-lg shadow-lg text-center"
-          >
-            <img
-              src={drink.image}
-              alt={drink.name}
-              className="w-24 h-24 object-cover rounded-full mb-4"
-            />
-            <h2 className="text-xl font-semibold mb-2">{drink.name}</h2>
-            <p className="text-lg font-bold">{drink.price}</p>
-          </div>
+          key={index}
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }} // الشفافية 50%
+          className="coffee-item flex flex-col items-center justify-center text-white border border-black p-6 rounded-lg shadow-lg text-center"
+        >
+          <img
+            src={drink.image}
+            alt={drink.name}
+            className="w-24 h-24 object-cover rounded-full mb-4"
+          />
+          <h2 className="text-xl font-semibold mb-2">{drink.name}</h2>
+          <p className="text-lg font-bold">{drink.price}</p>
+        </div>
+        
         ))}
       </div>
     </div>

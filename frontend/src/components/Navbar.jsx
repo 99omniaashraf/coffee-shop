@@ -40,7 +40,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">SignUp</a>  {/* SignUp button */}
+                    <a className="btn">SignUp</a>  
                 </div>
             </div>
         </div>
