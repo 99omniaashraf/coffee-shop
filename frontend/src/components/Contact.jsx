@@ -31,7 +31,9 @@ function Contact() {
         minHeight: '100vh',
       }}
     >
-      <h1 className="text-3xl font-bold text-center mb-4">Contact Us</h1>
+      <h1 className="text-3xl font-bold text-center mb-4" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+        Contact Us
+      </h1>
 
       <div className="flex justify-center">
         <form

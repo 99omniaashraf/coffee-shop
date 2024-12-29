@@ -5,7 +5,9 @@ import about1 from "../assets/images/about1.png";
 function About() {
   return (
     <div className="about-us container mx-auto p-6 bg-black text-white" style={{ backgroundImage: `url(${about1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <h1 className="text-3xl font-bold text-center mb-4">About Us</h1>
+      <h1 className="text-3xl font-bold text-center mb-4" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+        About Us
+      </h1>
 
       <div className="flex flex-wrap items-center justify-between">
         

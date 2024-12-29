@@ -28,26 +28,26 @@ function Menu() {
         backgroundPosition: 'center',
       }}
     >
-      <h1 className="text-3xl font-bold text-center mb-6 bg-black bg-opacity-50 p-3 rounded-lg">
+      <h1 className="text-3xl font-bold text-center mb-6  bg-opacity-50 p-3 rounded-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
         Our Coffee Menu
       </h1>
+
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {coffeeDrinks.map((drink, index) => (
           <div
-          key={index}
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }} // الشفافية 50%
-          className="coffee-item flex flex-col items-center justify-center text-white border border-black p-6 rounded-lg shadow-lg text-center"
-        >
-          <img
-            src={drink.image}
-            alt={drink.name}
-            className="w-24 h-24 object-cover rounded-full mb-4"
-          />
-          <h2 className="text-xl font-semibold mb-2">{drink.name}</h2>
-          <p className="text-lg font-bold">{drink.price}</p>
-        </div>
-        
+            key={index}
+            className="coffee-item flex flex-col items-center justify-center text-white border border-black p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-2xl"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', transition: 'all 0.3s ease-in-out' }}
+          >
+            <img
+              src={drink.image}
+              alt={drink.name}
+              className="w-24 h-24 object-cover rounded-full mb-4"
+            />
+            <h2 className="text-xl font-semibold mb-2">{drink.name}</h2>
+            <p className="text-lg font-bold">{drink.price}</p>
+          </div>
         ))}
       </div>
     </div>
